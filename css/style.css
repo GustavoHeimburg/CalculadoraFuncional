@@ -1,0 +1,14 @@
+body, html{
+    background-color: lightgray;
+}
+div#calculadora{
+    margin: auto;
+    width: 550px;
+    height: 700px;
+    border: none;
+    background-color: #363636;
+    border-radius: 32px;
+    font-family: 'Orbitron' sans-serif;
+    box-shadow: inset;
+    box-shadow: 10px 10px 15px 3px;
+}
