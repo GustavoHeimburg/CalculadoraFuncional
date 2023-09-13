@@ -28,3 +28,8 @@ function addToScreen(value){
         }
     }
 }
+
+//FUNÇÃO QUE REALIZA O RESULTADO DOS CALCULOS
+function resultado(){
+    screen.value = eval(screen.value);
+}
