@@ -12,3 +12,35 @@ div#calculadora{
     box-shadow: inset;
     box-shadow: 10px 10px 15px 3px;
 }
+#scren{
+    font-family: inherit;
+    font-size: 60px;
+    width: 510px;
+    height: 130px;
+    margin: 40px 20px;
+    border: none;
+    border-radius: 24px;
+    box-shadow: inset 5px 5px 30px gray ;
+}
+#botoesCalculadora{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 95px 95px 95px 95px 95px;
+    grid-gap: 8px;
+    grid-template-rows: 100px 100px 100px 100px 100px;
+}
+button{
+    outline: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: dimgray;
+    color: whitesmoke;
+    font: inherit;
+    font-size: 30px;
+    box-shadow: 5px 3px 5px black;
+}
+button:hover{
+    box-shadow: inset 5px 3px 15px black;
+    background-color: #283747;
+}
