@@ -16,8 +16,10 @@ document.querySelector('#deletar').addEventListener('click', function (){
 
 //FUNÇÃO QUE RECEBE O CLIQUE DO BOTÃO E COLOCA NA TELA DA CALCULADORA
 
+const operatorsDefault = ['*', '+', '-', '/', ',', '.'];
+
 function addToScreen(value){
-    const operatorsDefault = ['*', '+', '-', '/', ',', '.'];
+
     screen.value +=value;
 
     if (operatorsDefault.includes(value)){
@@ -25,11 +27,32 @@ function addToScreen(value){
         if (operatorsDefault.includes(screen.value[valueprevious])){
             screen.value = screen.value.substring(0,(screen.value.length -2));
             screen.value = screen.value + value
+        if (operatorsDefault.values(1)){
+            screen.value = valueprevious
+        }
+
+//CASO A OPERAÇÃO INICIO COM OS OPERADORES DEIXA O CAMPO VAZIO
+        }
+        switch (screen.value[0]){
+            case '*':
+                screen.value = '';
+            case '/':
+                screen.value = '';
+            case '.':
+                screen.value = '';
+            case '-':
+                screen.value = '';
+            case '+':
+                screen.value = '';
         }
     }
 }
 
 //FUNÇÃO QUE REALIZA O RESULTADO DOS CALCULOS
 function resultado(){
-    screen.value = eval(screen.value);
+    if (operatorsDefault.includes(screen.value[screen.value.length -1])){
+        screen.value = "0"
+    }else {
+        screen.value = eval(screen.value);
+    }
 }
